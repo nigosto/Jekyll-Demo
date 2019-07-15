@@ -16,6 +16,7 @@
 title: Gosho 
 email: nigosto@example.com
 description: I am lazy
+destination: docs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -37,3 +38,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - docs
