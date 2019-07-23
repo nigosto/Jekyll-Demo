@@ -5,25 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+    <script src="https://kit.fontawesome.com/9578b4b943.js"></script>
     <title>{{site.title}}</title>
+    <script src="{{ site.baseurl }}/scripts/site.js"></script>
 </head>
 
 <body>
-
     <div class="site">
         <header class="site-header">
-            <h1><a href="/">{{site.title}}</a></h1>
-
-            <nav>
-                <ul>
-                    {% for page in site.pages%}
-                        {% if page.title%}
-                            <li><a href="{{page.url}}">{{page.title}}</a></li>
-                        {% endif%}
-                    {%endfor%}
-                </ul>
-            </nav>
+            {% if true == page.home %}
+            <h1 class="site-title"><a href="{{ site.baseurl }}/">{{site.title}}</a></h1>
+            {% else %}
+            <p class="site-title"><a href="{{ site.baseurl }}/">{{site.title}}</a></p>
+            {% endif %}
+           {% include navigation.html location="header" %}
         </header>
 
         <main class="site-main">
@@ -34,9 +30,7 @@
             {{content}}
         </main>
 
-        <aside class="site-sidebar">
-
-        </aside>
+        {% include sidebar.html location="sidebar" %}
 
         <footer class="site-footer">
             <h6>{{site.title}}</h6>

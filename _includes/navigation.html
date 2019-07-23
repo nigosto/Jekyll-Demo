@@ -1,0 +1,16 @@
+<nav class="site-nav">
+    <ul>
+        {% for page in site.pages%}
+        {% if page.title%}
+        <li>
+            <a href="{{ site.baseurl }}{{page.url}}">
+                <i class="fas fa-address-card"></i>
+                {{page.title}}
+            </a>
+        </li>
+        {% endif%}
+        {%endfor%}
+    </ul>
+
+    <!-- {{include.location}} -->
+</nav>
