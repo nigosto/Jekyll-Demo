@@ -46,3 +46,4 @@ gulp.task("watch", function() {
 });
 
 gulp.task("default", gulp.series('jekyll', 'css', 'watch'));
+gulp.task("deploy", gulp.series('jekyll', 'css'));
