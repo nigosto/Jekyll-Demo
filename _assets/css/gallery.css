@@ -12,7 +12,9 @@
     display: flex;
     margin-bottom: 5%;
     position: relative;
+    opacity: 0;
     animation: fadeIn 0.6s ease-in;
+    animation-fill-mode: both;
 }
 
 .gallery li:nth-child(2) {
